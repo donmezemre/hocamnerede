@@ -5,7 +5,7 @@ const SearchScreen = props => {
     return (
         <View style={styles.container} >
             <Text>
-                SearchScreen SearchScreen
+                Arama Ekranı
             </Text>
         </View>
     )
