@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     container: {
         width: "100%",
         height: 90,
-        padding: 20,
+        paddingLeft: 30,
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: "row"

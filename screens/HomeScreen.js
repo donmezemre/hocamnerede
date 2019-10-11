@@ -89,7 +89,7 @@ const HomeScreen = props => {
     }
 
     return (
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false} >
             <View style={styles.container} >
 
                 <SlideShow images={images} />

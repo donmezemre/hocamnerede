@@ -21,7 +21,7 @@ const PopularCoursesList = props => {
             <View style={{ height: 285 }} >
 
                 <ScrollView
-                    contentContainerStyle={{ paddingRight: 15 }}
+                    contentContainerStyle={{ paddingRight: 15, paddingLeft: 10 }}
                     style={{ paddingLeft: 10 }}
                     showsHorizontalScrollIndicator={false}
                     horizontal
