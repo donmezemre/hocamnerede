@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
         justifyContent: "flex-start",
         width: "100%",
         paddingTop: 10,
-        paddingLeft: 20,
+        paddingLeft: 30,
         paddingRight: 15
     },
     titleTextContainer: {

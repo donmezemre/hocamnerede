@@ -1,12 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
+
 const CourseDetailScreen = props => {
-    const teacherId = props.navigation.getParam('courseId');
+    const courseId = props.navigation.getParam('courseId');
     return (
         <View style={styles.container} >
             <Text>CourseDetailScreen</Text>
-            <Text>{teacherId}</Text>
+            <Text>{courseId}</Text>
         </View>
     )
 }

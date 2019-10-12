@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         width: "100%",
         paddingTop: 10,
-        paddingLeft: 20,
+        paddingLeft: 30,
         paddingRight: 15,
     },
     titleTextContainer: {

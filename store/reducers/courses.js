@@ -1,8 +1,9 @@
-import { GET_ALL_COURSES, GET_POPULAR_COURSES } from "../actions/courses";
+import { GET_ALL_COURSES, GET_POPULAR_COURSES, SEARCH_COURSE } from "../actions/courses";
 
 const initialState = {
     courses: [],
-    popularCourses: []
+    popularCourses: [],
+    searchedCourses: []
 }
 
 
@@ -17,6 +18,11 @@ export default (state=initialState, action) => {
             return {
                 ...state,
                 popularCourses: action.coursesData
+            }
+        case SEARCH_COURSE:
+            return {
+                ...state,
+                searchedCourses: action.searchedCourses
             }
         default:
             return state;

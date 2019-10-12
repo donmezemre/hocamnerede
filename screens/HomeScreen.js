@@ -136,7 +136,7 @@ const HomeScreen = props => {
 
 HomeScreen.navigationOptions = (navData) => {
     return {
-        headerTitle: "ANA SAYFA",
+        headerTitle: "Hocam Nerede",
         headerRight: (
             <HeaderButtons HeaderButtonComponent={HeaderButton}>
                 <Item

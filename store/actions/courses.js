@@ -4,6 +4,7 @@ import Course from '../../models/course';
 
 export const GET_ALL_COURSES = 'GET_ALL_COURSES';
 export const GET_POPULAR_COURSES = 'GET_POPULAR_COURSES';
+export const SEARCH_COURSE = 'SEARCH_COURSE';
 
 export const getAllCourses = () => {
     return async dispatch => {
@@ -67,6 +68,35 @@ export const getPopularCourses = () => {
         dispatch({
             type: GET_POPULAR_COURSES,
             coursesData: courses
+        })
+    }
+}
+
+export const searchCourse = (input) => {
+    return async dispatch => {
+        const response = await fetch(`https://api.hocamnerede.com/search/searchbycoursename?arama=${input}&&password=${ENV().apiKey}`);
+        if (!response.ok) {
+            throw new Error('Something went Wrong!');
+        }
+        const resData = await response.json();
+        console.log(resData)
+        const courses = [];
+        for(let i = 0;i < resData.length; i++){
+            const newCourse = new PopularCourse(
+                resData[i].teacherFirstName,
+                resData[i].teacherLastName,
+                resData[i].courseID,
+                resData[i].courseRating,
+                resData[i].coursePrice,
+                resData[i].courseName,
+                resData[i].coursePictureURL,
+                resData[i].categoryName,
+            )
+            courses.push(newCourse)
+        }
+        dispatch({
+            type: SEARCH_COURSE,
+            searchedCourses: courses
         })
     }
 }
